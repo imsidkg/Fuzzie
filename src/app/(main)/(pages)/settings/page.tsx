@@ -1,5 +1,7 @@
 
+import ProfileForm from '@/components/forms/ProfileForm'
 import React from 'react'
+import ProfilePicture from './_components/ProfilePicture'
 
 
 type Props = {}
@@ -18,8 +20,15 @@ const Settings = async (props: Props) => {
                 Add or update your information
               </p>
             </div>
-           
-            
+           <ProfilePicture
+            onDelete={removeProfileImage}
+            userImage={user?.profileImage || ''}
+            onUpload={uploadProfileImage}
+           >
+
+           </ProfilePicture>
+
+            <ProfileForm user = '' onUpdate= '' />
           </div>
         </div>
       )
