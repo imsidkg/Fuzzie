@@ -1,4 +1,4 @@
-
+'use client'
 import ProfileForm from '@/components/forms/ProfileForm'
 import React from 'react'
 import ProfilePicture from './_components/ProfilePicture'
