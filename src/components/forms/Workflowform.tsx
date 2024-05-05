@@ -4,10 +4,14 @@ import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { WorkflowFormSchema } from '@/lib/types'
 import { z } from 'zod'
-type Props = {}
+import { useModal } from '@/providers/ModalProvider'
+type Props = {
+    title?: string
+  subTitle?: string
+}
 
-const Workflowform = (props: Props) => {
-
+const Workflowform = ({title , subTitle}: Props) => {
+    const { setClose } = useModal()
 
     const form = useForm<z.infer<typeof WorkflowFormSchema>>({
         mode: 'onChange',
