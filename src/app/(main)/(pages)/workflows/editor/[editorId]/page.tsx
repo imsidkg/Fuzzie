@@ -1,3 +1,4 @@
+import { ConnectionsProvider } from '@/providers/ConnectionProvider'
 import EditorProvider from '@/providers/EditorProvider'
 import React from 'react'
 
@@ -5,7 +6,11 @@ type Props = {}
 
 const page = (props: Props) => {
   return (
-    <div><EditorProvider/></div>
+   <EditorProvider>
+    <ConnectionsProvider>
+      <></>
+    </ConnectionsProvider>
+   </EditorProvider>
   )
 }
 
